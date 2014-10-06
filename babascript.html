@@ -1,0 +1,44 @@
+<script type="text/x-red" data-template-name='babascript'>
+  <div class='form-row'>
+    <label for="node-input-name"><i class="fa fa-tasks"></i>id</label>
+    <input type="text" id="node-input-id" placeholder="id...">
+    <label for="node-input-key"><i class="fa fa-tasks"></i>key</label>
+    <input type="text" id="node-input-key" placeholder="key...">
+  </div>
+</script>
+
+<script type="text/x-red" data-template-name='babascriptclient'>
+  <div class='form-row'>
+    <label for="node-client-name"><i class="fa fa-tasks"></i>name</label>
+    <input type="text" id="node-input-name" placeholder="name...">
+  </div>
+</script>
+
+<script type="text/javascript">
+  RED.nodes.registerType('babascript', {
+    category: 'hardware',
+    color: 'rgb(100, 100, 100)',
+    defaults: {
+      name: {value: ""},
+      key: {value: ""}
+    },
+    inputs: 1,
+    outputs: 1,
+    label: function(){
+      return "babascript";
+    },
+  });
+
+  RED.nodes.registerType('babascriptclient', {
+    category: 'hardware',
+    color: 'rgb(100, 100, 100)',
+    defaults: {
+      name: {value: ""},
+    },
+    inputs: 1,
+    outputs: 1,
+    label: function(){
+      return "babascript client";
+    }
+  });
+</script>
